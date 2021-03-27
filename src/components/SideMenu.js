@@ -81,12 +81,12 @@ export default function SideMenu() {
 
     return (
         <SideNav variant = "permanent" className={classes.sideNav}>
-            {/* <List>
+            <List>
                 <ListItem container>
                 <input type = "text" className={classes.searchBox}/>
                 </ListItem>
-            </List> */}
-            <InputBase className={classes.searchBox} placeholder=" SEARCH"/>
+            </List>
+            {/* <InputBase className={classes.searchBox} placeholder=" SEARCH"/> */}
             <h6 className={classes.subHeading} >ACCOUNTS</h6>
             <List>
                 {itemList1.map((item,index)=>{
