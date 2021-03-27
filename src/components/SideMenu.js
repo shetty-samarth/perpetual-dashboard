@@ -3,7 +3,7 @@ import {Drawer as SideNav,
 ListItem,
 List,
 ListItemIcon,
-ListItemText,makeStyles} from '@material-ui/core'
+ListItemText,makeStyles, InputBase} from '@material-ui/core'
 import Balance from '@material-ui/icons/PieChartTwoTone';
 import Transaction from '@material-ui/icons/ReceiptTwoTone';
 import Details from '@material-ui/icons/MonetizationOnTwoTone';
@@ -17,18 +17,20 @@ import Holiday from '@material-ui/icons/BeachAccessTwoTone';
 
 const useStyles = makeStyles({
     sideNav:{
-        overflow:"hidden",
-        display:'flex',
-        flexDirection:'column'
+        display:'absolute',
+        flexDirection:'column',
     },
     searchBox:{
-        width:"248px",
-        height: "59px",
+        width:"289px",
+        height: "px",
         backgroundColor:"#F1F2F2",
         borderRadius:"12px",
         outline:"none",
         margin:"10px 5px 10px 5px",
-        border:'1px solid #F1F2F2'
+        border:'1px solid #F1F2F2',
+        fontFamily:"Roboto",
+        fontSize:"20px",
+        textAlign:"center"
     },
 
     subHeading: {
@@ -41,6 +43,21 @@ const useStyles = makeStyles({
         color:"#818181",
         margin: "10px 20px 10px 20px",
         position:"relative",
+    },
+
+    listItem:{
+        position:"relative",
+        left:"0",
+        width:"240px",
+        outline:'none',
+        '&:hover':{
+            width:"240px",
+            backgroundColor:"#FFD051",
+            borderRadius:"0px 8px 8px 0px",
+            cursor: 'pointer',
+            outline:'none'
+            
+        }
     }
 })
 
@@ -64,18 +81,18 @@ export default function SideMenu() {
 
     return (
         <SideNav variant = "permanent" className={classes.sideNav}>
-            <List>
+            {/* <List>
                 <ListItem container>
                 <input type = "text" className={classes.searchBox}/>
                 </ListItem>
-            </List>
-            
+            </List> */}
+            <InputBase className={classes.searchBox} placeholder=" SEARCH"/>
             <h6 className={classes.subHeading} >ACCOUNTS</h6>
             <List>
                 {itemList1.map((item,index)=>{
                     const {text, icon} = item
                     return(
-                    <ListItem button key={text}>
+                    <ListItem button key={text} className={classes.listItem}>
                         {icon && <ListItemIcon>{icon}</ListItemIcon>}
                         <ListItemText primary={text} />
                     </ListItem>
@@ -88,7 +105,7 @@ export default function SideMenu() {
                 {itemList2.map((item,index)=>{
                     const {text,icon} = item
                     return(
-                        <ListItem button key={text}>
+                        <ListItem button key={text} className={classes.listItem}>
                             {icon && <ListItemIcon>{icon}</ListItemIcon>}
                             <ListItemText primary={text} />
                         </ListItem>
@@ -101,7 +118,7 @@ export default function SideMenu() {
                 {itemList3.map((item,index)=>{
                     const {text,icon} = item
                     return(
-                        <ListItem button key={text}>
+                        <ListItem button key={text} className={classes.listItem}>
                             {icon&&<ListItemIcon>{icon}</ListItemIcon>}
                             <ListItemText primary = {text} />
                         </ListItem>

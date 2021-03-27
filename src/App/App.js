@@ -1,8 +1,9 @@
 import React from 'react';
 import SideMenu from '../components/SideMenu';
 import logo from '../logo.svg';
-import {makeStyles} from '@material-ui/core'
+import {CssBaseline, makeStyles} from '@material-ui/core'
 import './App.css';
+import Header from '../components/Header';
 
 const useStyles = makeStyles({
   sideMenu: {
@@ -14,15 +15,17 @@ const useStyles = makeStyles({
       height: '100%',
       width: '280px',
       backgroundColor:'#fff9e0',
-      
-  }
+  },
+  
 })
 
 function App() {
   const classes = useStyles();
   return (
     <>
-      <SideMenu className={classes.sideMenu}></SideMenu>
+       <SideMenu></SideMenu>
+      <Header className={classes.header}/>
+      <CssBaseline />
     </>
     
   );
