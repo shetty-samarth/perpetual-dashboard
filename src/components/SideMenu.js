@@ -19,9 +19,10 @@ const useStyles = makeStyles({
     sideNav:{
         display:'absolute',
         flexDirection:'column',
+        width:"70%"
     },
     searchBox:{
-        width:"289px",
+        width:"250px",
         height: "px",
         backgroundColor:"#F1F2F2",
         borderRadius:"12px",
@@ -65,7 +66,7 @@ export default function SideMenu() {
     const classes = useStyles();
 
     const itemList1 = [{text:"Balance Summary", icon:<Balance />},
-    {text:"Transactions",icon:<Transaction />},
+    {text:"Transactions",icon:<Transaction />}, 
     {text:"Check Details",icon:<Details />},
     {text:"Fixed Term Holdings",icon:<Holdings />}]
 
