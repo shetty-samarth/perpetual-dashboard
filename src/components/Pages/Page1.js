@@ -1,13 +1,13 @@
-import Header from '../components/Header';
-import PieGraph from '../components/PieGraph';
-import PieGraphstwo from '../components/PieGraphstwo';
-import CardsComp from '../components/CardsComp';
-import CardsComp2 from '../components/CardsComp2';
-import DropInfo1 from '../components/DropInfo1';
-import DropInfo2 from '../components/DropInfo2';
+import Header from '../Header';
+import PieGraph from '../PieGraph';
+import PieGraphstwo from '../PieGraphstwo';
+import CardsComp from '../CardsComp';
+import CardsComp2 from '../CardsComp2';
+import DropInfo1 from '../DropInfo1';
+import DropInfo2 from '../DropInfo2';
 import {CssBaseline, Grid, InputBase, makeStyles, Typography} from '@material-ui/core'
 import React from 'react';
-import SideMenu from '../components/SideMenu';
+import SideMenu from '../SideMenu';
 
 const useStyles = makeStyles({
     sideMenu: {

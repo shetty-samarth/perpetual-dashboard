@@ -15,6 +15,8 @@ import Info from '@material-ui/icons/InfoTwoTone';
 import Tutorial from '@material-ui/icons/PlayCircleOutlineTwoTone';
 import Holiday from '@material-ui/icons/BeachAccessTwoTone';
 
+import {Link} from 'react-router-dom'
+
 const useStyles = makeStyles({
     sideNav:{
         display:'absolute',
@@ -51,6 +53,7 @@ const useStyles = makeStyles({
         left:"0",
         width:"240px",
         outline:'none',
+        textDecoration:'none',
         '&:hover':{
             width:"240px",
             backgroundColor:"#FFD051",
@@ -59,24 +62,30 @@ const useStyles = makeStyles({
             outline:'none'
             
         }
+    },
+
+    listChild:{
+        textDecoration:'none',
+        display:'inline-block',
+        color:"black    "
     }
 })
 
 export default function SideMenu() {
     const classes = useStyles();
 
-    const itemList1 = [{text:"Balance Summary", icon:<Balance />},
-    {text:"Transactions",icon:<Transaction />}, 
-    {text:"Check Details",icon:<Details />},
-    {text:"Fixed Term Holdings",icon:<Holdings />}]
+    const itemList1 = [{text:"Balance Summary", icon:<Balance />,path:'/'},
+    {text:"Transactions",icon:<Transaction />,path:'/transaction'}, 
+    {text:"Check Details",icon:<Details />,path:'/details'},
+    {text:"Fixed Term Holdings",icon:<Holdings />,path:'/holdings'}]
 
-    const itemList2 = [{text:"Statements", icon:<Statement />},
-    {text:"Daily Confirms",icon:<DailyConf />},
-    {text:"Documents",icon:<Documents />}]
+    const itemList2 = [{text:"Statements", icon:<Statement />,path:'/statements'},
+    {text:"Daily Confirms",icon:<DailyConf />,path:'/dailyconfirms'},
+    {text:"Documents",icon:<Documents />,path:'/documents'}]
 
-    const itemList3 = [{text:"Account Information", icon:<Info />},
-    {text:"Tutorials",icon:<Tutorial />},
-    {text:"Holiday Schedule",icon:<Holiday />}]
+    const itemList3 = [{text:"Account Information", icon:<Info />,path:'/AccountInfo'},
+    {text:"Tutorials",icon:<Tutorial />,path:'/Tutorials'},
+    {text:"Holiday Schedule",icon:<Holiday />,path:'/Holiday'}]
 
 
 
@@ -91,11 +100,14 @@ export default function SideMenu() {
             <h6 className={classes.subHeading} >ACCOUNTS</h6>
             <List>
                 {itemList1.map((item,index)=>{
-                    const {text, icon} = item
+                    const {text, icon, path} = item
                     return(
                     <ListItem button key={text} className={classes.listItem}>
                         {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                        <Link to={item.path} className={classes.listChild}>
+                        
                         <ListItemText primary={text} />
+                        </Link>
                     </ListItem>
                     )
                 })}
@@ -108,7 +120,10 @@ export default function SideMenu() {
                     return(
                         <ListItem button key={text} className={classes.listItem}>
                             {icon && <ListItemIcon>{icon}</ListItemIcon>}
-                            <ListItemText primary={text} />
+                            <Link to={item.path} className={classes.listChild}>
+                        
+                        <ListItemText primary={text} />
+                        </Link>
                         </ListItem>
                     )
                 })}
@@ -120,8 +135,11 @@ export default function SideMenu() {
                     const {text,icon} = item
                     return(
                         <ListItem button key={text} className={classes.listItem}>
-                            {icon&&<ListItemIcon>{icon}</ListItemIcon>}
-                            <ListItemText primary = {text} />
+                            {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                            <Link to={item.path} className={classes.listChild}>
+                        
+                        <ListItemText primary={text} />
+                        </Link>
                         </ListItem>
                     )
                 })}
