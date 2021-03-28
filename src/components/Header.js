@@ -1,11 +1,13 @@
 import React from 'react'
-import {AppBar, Avatar, Grid, InputBase, Toolbar, Typography} from '@material-ui/core'
+import {AppBar, Avatar, Divider, Grid, InputBase, Toolbar, Typography} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core'
 
 const useStyles = makeStyles({
     appbar:{
         height:"303px",
-        marginRight:"300px"
+        marginRight:"300px",
+        position:"absolute",
+        zIndex: "-1"
     },
 
     name:{
@@ -21,7 +23,9 @@ const useStyles = makeStyles({
         padding:"5px 9px 5px 9px",
         borderRadius:"12px",
         border:"none",
-        alignItems:"center"
+        alignItems:"center",
+        cursor:'pointer',
+        outline:'none'
     },
 
     avatar:{
@@ -31,7 +35,8 @@ const useStyles = makeStyles({
 
    userName:{
     marginTop:"15px",
-   }
+   },
+
 })
 function Header() {
     const classes = useStyles()
@@ -43,7 +48,7 @@ function Header() {
                         <InputBase />
                     </Grid>
                     <Grid item sm={5} >
-                        <h4 className={classes.name}>Example Company</h4>
+                        <h2 className={classes.name}>Example Company</h2>
                     </Grid>
                     <Grid item sm={2} >
                             <button className={classes.btn}>Whats New?</button>
@@ -56,7 +61,23 @@ function Header() {
                             <div>Allie Gator</div>
                             <div>Consultant</div>
                     </Grid>
+                </Grid>
+                <Divider />
+            </Toolbar>
+            <Divider />
+            <Toolbar >
+                <Grid container>
+                <Grid item sm={3} >
+                        <InputBase />
+                    </Grid>
 
+                    <Grid item sm={5} >
+                    <h4 className={classes.name}>Balance Summary</h4>
+                    </Grid>
+
+                    <Grid item sm={4} >
+                        <InputBase />
+                    </Grid>
                 </Grid>
             </Toolbar>
         </AppBar>
