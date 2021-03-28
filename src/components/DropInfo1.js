@@ -9,7 +9,7 @@ import { Grid, InputBase } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '70%',
+    width: 'auto',
     // position:"absolute",
     //marginLeft:"400px",
     marginTop:"10px"
@@ -19,13 +19,14 @@ const useStyles = makeStyles((theme) => ({
     
   },
   accordian:{
-    width:'95%',
+    width:'100%',
     backgroundColor:"#D5D5D5"
   },
 
   grid:{
       backgroundColor:"White",
-      width:"95%"
+      width:"100%",
+      marginRight:"65px"
   }
 }));
 

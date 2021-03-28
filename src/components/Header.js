@@ -7,11 +7,12 @@ const useStyles = makeStyles({
         height:"303px",
         marginRight:"300px",
         position:"absolute",
-        zIndex: "-1"
+        zIndex: "-1",
+        width:"100%"
     },
 
     name:{
-        marginLeft:"70px",
+        marginLeft:"50px",
         marginTop:"25px"
     },
 

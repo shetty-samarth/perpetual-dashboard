@@ -3,10 +3,11 @@ import {Card, CardContent, Divider, FormHelperText, Grid, makeStyles, Typography
 const useStyles = makeStyles({
     card1:{
         width:"400px",
-        position:"absolute",
-        marginLeft:"400px",
-        marginTop:"150px",
-        borderRadius:"12px"
+        position:"relative",
+        marginLeft:"50px",
+        // marginTop:"150px",
+        borderRadius:"12px",
+        height:"50vh"
     },
     amount:{
         fontSize:"48px",

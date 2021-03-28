@@ -5,10 +5,11 @@ import PieGraphstwo from './PieGraphstwo'
 const useStyles = makeStyles({
     card1:{
         width:"400px",
-        position:"absolute",
-        marginLeft:"850px",
-        marginTop:"150px",
-        borderRadius:"12px"
+        position:"relative",
+        marginLeft:"50px",
+        // marginTop:"150px",
+        borderRadius:"12px",
+        height:"50vh"
     },
     ul:{
         marginTop:"80px"
