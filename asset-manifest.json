@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/perpetual-dashboard/static/css/main.3b34a9ad.chunk.css",
-    "main.js": "/perpetual-dashboard/static/js/main.a52d4411.chunk.js",
-    "main.js.map": "/perpetual-dashboard/static/js/main.a52d4411.chunk.js.map",
-    "runtime-main.js": "/perpetual-dashboard/static/js/runtime-main.754f08a9.js",
-    "runtime-main.js.map": "/perpetual-dashboard/static/js/runtime-main.754f08a9.js.map",
-    "static/js/2.3b4a5a77.chunk.js": "/perpetual-dashboard/static/js/2.3b4a5a77.chunk.js",
-    "static/js/2.3b4a5a77.chunk.js.map": "/perpetual-dashboard/static/js/2.3b4a5a77.chunk.js.map",
-    "static/js/3.7402e568.chunk.js": "/perpetual-dashboard/static/js/3.7402e568.chunk.js",
-    "static/js/3.7402e568.chunk.js.map": "/perpetual-dashboard/static/js/3.7402e568.chunk.js.map",
+    "main.css": "/perpetual-dashboard/static/css/main.b9645714.chunk.css",
+    "main.js": "/perpetual-dashboard/static/js/main.f0beb5a4.chunk.js",
+    "main.js.map": "/perpetual-dashboard/static/js/main.f0beb5a4.chunk.js.map",
+    "runtime-main.js": "/perpetual-dashboard/static/js/runtime-main.f9e0ec70.js",
+    "runtime-main.js.map": "/perpetual-dashboard/static/js/runtime-main.f9e0ec70.js.map",
+    "static/js/2.03f9efb9.chunk.js": "/perpetual-dashboard/static/js/2.03f9efb9.chunk.js",
+    "static/js/2.03f9efb9.chunk.js.map": "/perpetual-dashboard/static/js/2.03f9efb9.chunk.js.map",
+    "static/js/3.e0fcacb0.chunk.js": "/perpetual-dashboard/static/js/3.e0fcacb0.chunk.js",
+    "static/js/3.e0fcacb0.chunk.js.map": "/perpetual-dashboard/static/js/3.e0fcacb0.chunk.js.map",
     "index.html": "/perpetual-dashboard/index.html",
-    "static/css/main.3b34a9ad.chunk.css.map": "/perpetual-dashboard/static/css/main.3b34a9ad.chunk.css.map",
-    "static/js/2.3b4a5a77.chunk.js.LICENSE.txt": "/perpetual-dashboard/static/js/2.3b4a5a77.chunk.js.LICENSE.txt",
+    "static/css/main.b9645714.chunk.css.map": "/perpetual-dashboard/static/css/main.b9645714.chunk.css.map",
+    "static/js/2.03f9efb9.chunk.js.LICENSE.txt": "/perpetual-dashboard/static/js/2.03f9efb9.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/perpetual-dashboard/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.754f08a9.js",
-    "static/js/2.3b4a5a77.chunk.js",
-    "static/css/main.3b34a9ad.chunk.css",
-    "static/js/main.a52d4411.chunk.js"
+    "static/js/runtime-main.f9e0ec70.js",
+    "static/js/2.03f9efb9.chunk.js",
+    "static/css/main.b9645714.chunk.css",
+    "static/js/main.f0beb5a4.chunk.js"
   ]
 }
