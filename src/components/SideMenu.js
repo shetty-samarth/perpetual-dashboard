@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useReducer } from 'react'
 import {Drawer as SideNav,
 ListItem,
 List,
@@ -60,35 +60,40 @@ const useStyles = makeStyles({
             borderRadius:"0px 8px 8px 0px",
             cursor: 'pointer',
             outline:'none'
-            
         }
     },
 
     listChild:{
         textDecoration:'none',
-        display:'inline-block',
-        color:"black    "
+        color:"black",
+    },
+
+    selectChild:{
+        textDecoration:'none',
+        color:"red",
     }
 })
 
-export default function SideMenu() {
+
+function SideMenu() {
     const classes = useStyles();
+    
 
-    const itemList1 = [{text:"Balance Summary", icon:<Balance />,path:'/'},
-    {text:"Transactions",icon:<Transaction />,path:'/transaction'}, 
-    {text:"Check Details",icon:<Details />,path:'/details'},
-    {text:"Fixed Term Holdings",icon:<Holdings />,path:'/holdings'}]
+    const itemList1 = [{text:"Balance Summary", icon:<Balance />,path:'/',select:false},
+    {text:"Transactions",icon:<Transaction />,path:'/transaction', select:false}, 
+    {text:"Check Details",icon:<Details />,path:'/details', select:false},
+    {text:"Fixed Term Holdings",icon:<Holdings />,path:'/holdings', select:false}]
 
-    const itemList2 = [{text:"Statements", icon:<Statement />,path:'/statements'},
-    {text:"Daily Confirms",icon:<DailyConf />,path:'/dailyconfirms'},
+    const itemList2 = [{text:"Statements", icon:<Statement />,path:'/statements', select:false},
+    {text:"Daily Confirms",icon:<DailyConf />,path:'/dailyconfirms', select:false},
     {text:"Documents",icon:<Documents />,path:'/documents'}]
 
-    const itemList3 = [{text:"Account Information", icon:<Info />,path:'/AccountInfo'},
-    {text:"Tutorials",icon:<Tutorial />,path:'/Tutorials'},
-    {text:"Holiday Schedule",icon:<Holiday />,path:'/Holiday'}]
+    const itemList3 = [{text:"Account Information", icon:<Info />,path:'/AccountInfo', select:false},
+    {text:"Tutorials",icon:<Tutorial />,path:'/Tutorials', select:false},
+    {text:"Holiday Schedule",icon:<Holiday />,path:'/Holiday', select:false}]
 
-
-
+    const [selected,setSelected] = useState(itemList1[0].text)
+    
     return (
         <SideNav variant = "permanent" className={classes.sideNav}>
             <List>
@@ -101,12 +106,16 @@ export default function SideMenu() {
             <List>
                 {itemList1.map((item,index)=>{
                     const {text, icon, path} = item
+                    let isSelected =selected
+                    
+                    // console.log("Item object",item)
+                    // console.log("Selected object",selected)
                     return(
                     <ListItem button key={text} className={classes.listItem}>
                         {icon && <ListItemIcon>{icon}</ListItemIcon>}
-                        <Link to={item.path} className={classes.listChild}>
+                        <Link to={item.path} className={classes.listChild} onClick={()=>{setSelected(text)}}>
                         
-                        <ListItemText primary={text} />
+                        <ListItemText primary={text} className={isSelected===text? classes.selectChild:classes.listChild}/>
                         </Link>
                     </ListItem>
                     )
@@ -116,7 +125,7 @@ export default function SideMenu() {
             <h6 className={classes.subHeading}>STATEMENTS</h6>
             <List>
                 {itemList2.map((item,index)=>{
-                    const {text,icon} = item
+                    const {text,icon,path} = item
                     return(
                         <ListItem button key={text} className={classes.listItem}>
                             {icon && <ListItemIcon>{icon}</ListItemIcon>}
@@ -132,7 +141,7 @@ export default function SideMenu() {
             <h6 className={classes.subHeading}>RESOURCES</h6>
             <List>
                 {itemList3.map((item,index)=>{
-                    const {text,icon} = item
+                    const {text,icon,path} = item
                     return(
                         <ListItem button key={text} className={classes.listItem}>
                             {icon && <ListItemIcon>{icon}</ListItemIcon>}
@@ -150,4 +159,4 @@ export default function SideMenu() {
     )
 }
 
-// export default SideMenu
+export default SideMenu

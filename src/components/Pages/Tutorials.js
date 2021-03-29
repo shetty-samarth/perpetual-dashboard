@@ -3,7 +3,7 @@ import './Pages.css'
 function Tutorials() {
     return (
         <div>
-            <h1 className="Default">Tutorials</h1>
+            <h1 className="Default">Welcome to the Tutorials page</h1>
         </div>
     )
 }

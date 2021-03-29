@@ -3,7 +3,7 @@ import './Pages.css'
 function CheckDetails() {
     return (
         <div>
-            <h1 className="Default">Check Details</h1>
+            <h1 className="Default">Welcome to Check Details Page</h1>
         </div>
     )
 }

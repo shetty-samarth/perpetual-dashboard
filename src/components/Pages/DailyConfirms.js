@@ -3,7 +3,7 @@ import './Pages.css'
 function DailyConfirms() {
     return (
         <div>
-            <h1 className="Default">Daily Confirms</h1>
+            <h1 className="Default">Welcome to Daily Confirms page</h1>
         </div>
     )
 }

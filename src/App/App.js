@@ -24,21 +24,22 @@ function App() {
     
       <div>
       
-        <Router>
+        <Router basename="/perpetual-dashboard">
         <SideMenu />
         <Switch>
+          
           <Route path='/' exact component={Page1} />
-          <Route path='/transaction' component={Transactions}/>
-          <Route path='/details' component={CheckDetails}/>
-          <Route path='/holdings' component={FixedHolding}/>
+          <Route path='/transaction' exact component={Transactions}/>
+          <Route path='/details' exact component={CheckDetails}/>
+          <Route path='/holdings' exact component={FixedHolding}/>
 
-          <Route path='/statements' component={Statement} />
-          <Route path='/dailyconfirms' component={DailyConfirms} />
-          <Route path='/documents' component={Documents} />
+          <Route path='/statements' exact component={Statement} />
+          <Route path='/dailyconfirms' exact component={DailyConfirms} />
+          <Route path='/documents' exact component={Documents} />
 
-          <Route path='/AccountInfo' component={AccountInfo} />
-          <Route path='/Tutorials' component={Tutorials} />
-          <Route path='/Holiday' component={Holiday} />
+          <Route path='/AccountInfo' exact component={AccountInfo} />
+          <Route path='/Tutorials' exact component={Tutorials} />
+          <Route path='/Holiday' exact component={Holiday} />
 
         </Switch>
         </Router>

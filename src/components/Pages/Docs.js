@@ -3,7 +3,7 @@ import './Pages.css'
 function Docs() {
     return (
         <div>
-            <h1 className="Default">Documents</h1>
+            <h1 className="Default">Welcome to Documents page</h1>
         </div>
     )
 }

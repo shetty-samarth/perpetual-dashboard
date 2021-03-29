@@ -3,7 +3,7 @@ import './Pages.css'
 function AccountInfo() {
     return (
         <div>
-            <h1 className="Default">Account Information</h1>
+            <h1 className="Default">Welcome to Account Information page</h1>
         </div>
     )
 }
