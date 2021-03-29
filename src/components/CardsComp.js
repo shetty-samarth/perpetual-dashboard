@@ -38,7 +38,7 @@ function CardsComp() {
                     <Grid container className={classes.gridSpacing}>
                         <Grid item sm={6}>
                         <Typography align="left">
-                        current balance
+                        Current Balance
                         </Typography>
                         </Grid>
                         <Grid item sm={6}>
@@ -58,7 +58,7 @@ function CardsComp() {
                         </Grid>
                         <Grid item sm={6}>
                         <Typography align = "right">
-                        $13673128
+                        +$520(1.25)
                         </Typography>
                         </Grid>                       
                     </Grid>
@@ -73,7 +73,7 @@ function CardsComp() {
                         </Grid>
                         <Grid item sm={6}>
                         <Typography align = "right">
-                        $13673128
+                        -$1,501.23(3.25)
                         </Typography>
                         </Grid>                       
                     </Grid>

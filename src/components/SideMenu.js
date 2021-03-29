@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react'
+import React, { useState, } from 'react'
 import {Drawer as SideNav,
 ListItem,
 List,
@@ -70,7 +70,7 @@ const useStyles = makeStyles({
 
     selectChild:{
         textDecoration:'none',
-        color:"red",
+        color:"blue",
     }
 })
 
@@ -126,12 +126,13 @@ function SideMenu() {
             <List>
                 {itemList2.map((item,index)=>{
                     const {text,icon,path} = item
+                    let isSelected =selected
                     return(
                         <ListItem button key={text} className={classes.listItem}>
                             {icon && <ListItemIcon>{icon}</ListItemIcon>}
-                            <Link to={item.path} className={classes.listChild}>
+                            <Link to={item.path} className={classes.listChild} onClick={()=>{setSelected(text)}}>
                         
-                        <ListItemText primary={text} />
+                        <ListItemText primary={text} className={isSelected===text? classes.selectChild:classes.listChild}/>
                         </Link>
                         </ListItem>
                     )
@@ -142,12 +143,13 @@ function SideMenu() {
             <List>
                 {itemList3.map((item,index)=>{
                     const {text,icon,path} = item
+                    let isSelected =selected
                     return(
                         <ListItem button key={text} className={classes.listItem}>
                             {icon && <ListItemIcon>{icon}</ListItemIcon>}
-                            <Link to={item.path} className={classes.listChild}>
+                            <Link to={item.path} className={classes.listChild} onClick={()=>{setSelected(text)}}>
                         
-                        <ListItemText primary={text} />
+                        <ListItemText primary={text} className={isSelected===text? classes.selectChild:classes.listChild}/>
                         </Link>
                         </ListItem>
                     )
